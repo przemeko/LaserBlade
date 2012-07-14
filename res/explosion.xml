@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:2ad9e6adef6554f9b8e9b6e456696111$ -->
+<TextureAtlas imagePath="explosion.png">
+    <SubTexture name="explode-1-00-00" x="2" y="102" width="23" height="23"/>
+    <SubTexture name="explode-1-00-01" x="2" y="77" width="23" height="23"/>
+    <SubTexture name="explode-1-00-02" x="27" y="52" width="23" height="23"/>
+    <SubTexture name="explode-1-00-03" x="2" y="52" width="23" height="23"/>
+    <SubTexture name="explode-1-00-04" x="27" y="27" width="23" height="23"/>
+    <SubTexture name="explode-1-00-05" x="2" y="27" width="23" height="23"/>
+    <SubTexture name="explode-1-00-06" x="27" y="2" width="23" height="23"/>
+    <SubTexture name="explode-1-00-07" x="2" y="2" width="23" height="23"/>
+</TextureAtlas>
