@@ -4,7 +4,9 @@ package com.kocznur
 	import starling.textures.Texture;
 	import starling.textures.TextureAtlas;
 	/**
-	 * ...
+	 * Assets
+	 * Prepare all gfx and sfx in one place
+	 * 
 	 * @author pkocznur
 	 */
 	public class Assets 

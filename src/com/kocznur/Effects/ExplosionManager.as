@@ -6,7 +6,10 @@ package com.kocznur.Effects
 	import starling.display.Sprite;
 	import starling.textures.Texture;
 	/**
-	 * ...
+	 * ExplosionManager
+	 * 
+	 * Object pool for Explosions
+	 * 
 	 * @author pkocznur
 	 */
 	public class ExplosionManager 
@@ -17,6 +20,14 @@ package com.kocznur.Effects
 		
 		private var sprite:Sprite;
 		
+		/**
+		 * ExplosionManager
+		 * 
+		 * @param	sprite
+		 * @param	textures
+		 * @param	maxNum
+		 * @param	fps
+		 */
 		public function ExplosionManager(sprite:Sprite, textures:Vector.<Texture>, maxNum:uint, fps:Number = 12) 
 		{
 			this.sprite = sprite;
@@ -35,6 +46,11 @@ package com.kocznur.Effects
 			}
 		}
 		
+		/**
+		 * run
+		 * 
+		 * @param	position
+		 */
 		public function run(position:Point):void
 		{
 			mvsNum = mvs.length;

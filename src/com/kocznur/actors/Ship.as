@@ -11,7 +11,8 @@ package com.kocznur.actors
 	import starling.events.KeyboardEvent;
 	import starling.textures.Texture;
 	/**
-	 * ...
+	 * Ship
+	 * 
 	 * @author pkocznur
 	 */
 	public class Ship extends Sprite
@@ -27,6 +28,9 @@ package com.kocznur.actors
 		
 		private var fireCallback:Function;
 		
+		/**
+		 * Ship
+		 */
 		public function Ship() 
 		{
 			addEventListener(Event.ADDED_TO_STAGE, init);
@@ -50,7 +54,11 @@ package com.kocznur.actors
 			stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPressed);
 		}
 		
-		
+		/**
+		 * setFireCallback
+		 * 
+		 * @param	callback
+		 */
 		public function setFireCallback(callback:Function):void
 		{
 			fireCallback = callback;
@@ -79,6 +87,11 @@ package com.kocznur.actors
 			}
 		}
 		
+		/**
+		 * update
+		 * 
+		 * @param	dt
+		 */
 		public function update(dt:Number):void
 		{
 			x += v.x*World.time;
@@ -103,6 +116,13 @@ package com.kocznur.actors
 			}
 		}
 		
+		/**
+		 * directionVector
+		 * 
+		 * in future ship will be rotating 
+		 * - an we will need direction
+		 * 
+		 */
 		public function get directionVector():Point 
 		{
 			return new Point(Math.cos(rotation - PI2), Math.sin(rotation - PI2));
@@ -115,6 +135,11 @@ package com.kocznur.actors
 			return _position;
 		}
 		
+		/**
+		 * fireDirection
+		 * 
+		 * Where bullet should go
+		 */
 		public function get fireDirection():Point 
 		{
 			return _fireDirection;

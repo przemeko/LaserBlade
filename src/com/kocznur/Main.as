@@ -4,8 +4,11 @@ package com.kocznur
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
 	import starling.core.Starling;
+	
 	/**
-	 * ...
+	 * Main
+	 * Init Starling engine (and stats) 
+	 * 
 	 * @author pkocznur
 	 */
 	[SWF(width="320",height="560",frameRate="60",backgroundColor="#222222")]

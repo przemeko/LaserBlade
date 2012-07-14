@@ -20,13 +20,13 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>D:\dev\flex-projects\StarshipGame\src</path-element>
-      <path-element>D:\dev\flex-projects\StarshipGame\lib</path-element>
+      <path-element>D:\dev\flex-projects\LaserBlade\src</path-element>
+      <path-element>D:\dev\flex-projects\LaserBlade\lib</path-element>
       <path-element>C:\Program Files\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
   </compiler>
   <file-specs>
-    <path-element>D:\dev\flex-projects\StarshipGame\src\com\kocznur\Main.as</path-element>
+    <path-element>D:\dev\flex-projects\LaserBlade\src\com\kocznur\Main.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>

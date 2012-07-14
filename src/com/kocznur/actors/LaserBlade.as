@@ -7,7 +7,8 @@ package com.kocznur.actors
 	import starling.display.Sprite;
 	import starling.events.Event;
 	/**
-	 * ...
+	 * LaserBlade
+	 * 
 	 * @author pkocznur
 	 */
 	public class LaserBlade
@@ -28,6 +29,11 @@ package com.kocznur.actors
 		private var collisionDetection:Boolean = false;
 		private var collisionCallback:Function;
 		
+		/**
+		 * LaserBlade
+		 * 
+		 * @param	sprite - container for generated lasers
+		 */
 		public function LaserBlade(sprite:Sprite) 
 		{
 			this.sprite = sprite;
@@ -46,6 +52,12 @@ package com.kocznur.actors
 			}
 		}
 		
+		/**
+		 * update
+		 * 
+		 * @param	start
+		 * @param	end
+		 */
 		public function update(start:Point, end:Point):void
 		{
 			if (!_show)
@@ -72,6 +84,12 @@ package com.kocznur.actors
 			}
 		}
 		
+		/**
+		 * checkCollision
+		 * 
+		 * @param	objects
+		 * @param	callback
+		 */
 		public function checkCollision(objects:Vector.<Zombie>, callback:Function):void
 		{
 			collisionObjects = objects;

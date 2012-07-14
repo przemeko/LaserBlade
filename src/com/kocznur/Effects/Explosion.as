@@ -5,13 +5,20 @@ package com.kocznur.Effects
 	import starling.events.Event;
 	import starling.textures.Texture;
 	/**
-	 * ...
+	 * Explosion
+	 * 
 	 * @author pkocznur
 	 */
 	public class Explosion extends MovieClip
 	{
 		private var _isOnStage:Boolean = false;
 		
+		/**
+		 * Explosion
+		 * 
+		 * @param	textures
+		 * @param	fps
+		 */
 		public function Explosion(textures:Vector.<Texture>, fps:Number) 
 		{
 			super(textures, fps);
@@ -20,6 +27,11 @@ package com.kocznur.Effects
 			this.addEventListener(Event.COMPLETE, onComplete)
 		}
 		
+		/**
+		 * Start animating explosion
+		 * 
+		 * @param	position
+		 */
 		public function show(position:Point):void
 		{
 			setPosition(position);
@@ -42,6 +54,10 @@ package com.kocznur.Effects
 			return _isOnStage;
 		}
 		
+		/**
+		 * Stop animation, and free some resources
+		 * 
+		 */
 		public function set isOnStage(value:Boolean):void 
 		{
 			visible = value;

@@ -9,7 +9,11 @@ package com.kocznur.actors
 	import starling.textures.Texture;
 	
 	/**
-	 * ...
+	 * Zombie
+	 * 
+	 * Zombie  - because this actor is stupid 
+	 * and go only in one direction (just like zombie)
+	 * 
 	 * @author pkocznur
 	 */
 	public class Zombie extends Sprite
@@ -21,7 +25,11 @@ package com.kocznur.actors
 		private var _isOut:Boolean;
 		private var _directionVector:Point;
 		
-		
+		/**
+		 * Zombie
+		 * 
+		 * @param	texture
+		 */
 		public function Zombie(texture:Texture) 
 		{
 			this.texture = texture;
@@ -43,6 +51,11 @@ package com.kocznur.actors
 			pivotY = height >> 1;
 		}
 		
+		/**
+		 * update
+		 * 
+		 * @param	dt
+		 */
 		public function update(dt:Number):void
 		{
  			x += _directionVector.x * _speed * World.time;
@@ -71,6 +84,11 @@ package com.kocznur.actors
 			return _isOnStage;
 		}
 		
+		/**
+		 * isOnStage
+		 * 
+		 * Define is actor actually on stage
+		 */
 		public function set isOnStage(value:Boolean):void 
 		{
 			_isOnStage = value;

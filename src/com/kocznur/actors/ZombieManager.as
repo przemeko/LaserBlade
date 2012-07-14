@@ -6,7 +6,10 @@ package com.kocznur.actors
 	import starling.display.Sprite;
 	import starling.textures.Texture;
 	/**
-	 * ...
+	 * ZombieManager
+	 * 
+	 * Object pool for zombies actor
+	 * 
 	 * @author pkocznur
 	 */
 	public class ZombieManager 
@@ -24,6 +27,13 @@ package com.kocznur.actors
 		private var collisionDetection:Boolean = false;
 		private var collisionCallback:Function;
 		
+		/**
+		 * ZombieManager
+		 * 
+		 * @param	sprite
+		 * @param	texture
+		 * @param	zombiesNum
+		 */
 		public function ZombieManager(sprite:Sprite, texture:Texture, zombiesNum:uint) 
 		{
 			this.sprite = sprite;
@@ -39,6 +49,13 @@ package com.kocznur.actors
 			}
 		}
 		
+		/**
+		 * run
+		 * 
+		 * @param	startPoint
+		 * @param	directionVector
+		 * @param	speed
+		 */
 		public function run(startPoint:Point, directionVector:Point, speed:Number = 4):void
 		{
 			zombiesNum = zombies.length;
@@ -59,6 +76,11 @@ package com.kocznur.actors
 			}
 		}
 		
+		/**
+		 * update
+		 * 
+		 * @param	dt
+		 */
 		public function update(dt:Number):void
 		{
 			zombiesNum = zombies.length;
@@ -84,6 +106,12 @@ package com.kocznur.actors
 			}
 		}
 		
+		/**
+		 * checkCollision
+		 * 
+		 * @param	objects
+		 * @param	callback
+		 */
 		public function checkCollision(objects:Vector.<Zombie>, callback:Function):void
 		{
 			collisionObjects = objects;
@@ -112,6 +140,10 @@ package com.kocznur.actors
 			
 		}
 		
+		/**
+		 * 
+		 * @return Vector.<Zombie>
+		 */
 		public function getObjects():Vector.<Zombie>
 		{
 			return zombies;
