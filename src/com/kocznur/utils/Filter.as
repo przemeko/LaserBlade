@@ -12,9 +12,18 @@ package com.kocznur.utils
 			
 		}
 		
+		/**
+		 * add
+		 * 
+		 * Does not allow to exceed maxValue
+		 * 
+		 * @param	value
+		 * @param	addValue
+		 * @param	maxValue
+		 * @return
+		 */
 		public static function add(value:Number, addValue:Number, maxValue:Number):Number
 		{
-			/*
 			if (addValue > 0)
 			{
 				if (value >= maxValue || value + addValue >= maxValue)
@@ -29,7 +38,7 @@ package com.kocznur.utils
 					return maxValue;
 				}
 			}
-			*/
+			
 			return value + addValue;
 		}
 		

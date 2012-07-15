@@ -5,6 +5,7 @@ package com.kocznur
 	import com.kocznur.actors.Zombie;
 	import com.kocznur.actors.ZombieManager;
 	import com.kocznur.Effects.ExplosionManager;
+	import com.kocznur.utils.SoundManager;
 	import flash.geom.Point;
 	import flash.ui.Keyboard;
 	import flash.utils.getTimer;

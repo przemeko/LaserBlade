@@ -17,15 +17,24 @@ package com.kocznur.actors
 	 */
 	public class Ship extends Sprite
 	{
+		// cache PI/2
 		private const PI2:Number = 1.5707963267948966;
 		
-		private var v:Point;
-		private var a:Point;
+		// where is the ship
 		private var _position:Point;
-		private var halfSize:Point;
+		// direction of ship
 		private var _directionVector:Point;
+		// where ship is currently shooting
 		private var _fireDirection:Point;
 		
+		// velocity of ship
+		private var v:Point;
+		// acceleration
+		private var a:Point;
+		// cache the size
+		private var halfSize:Point;
+
+		// bullets are handle elsewhere, so wee need callback
 		private var fireCallback:Function;
 		
 		/**
@@ -64,13 +73,19 @@ package com.kocznur.actors
 			fireCallback = callback;
 		}
 		
+		/**
+		 * onKeyPressed
+		 * 
+		 * @TODO check simultaneous ke pressed
+		 * @param	e
+		 */
 		private function onKeyPressed(e:KeyboardEvent):void 
 		{
 			//trace(e.charCode);
 			switch (e.charCode)
 			{
 				case 119: //w
-					v.y = Filter.add(v.y, -a.y, -2);
+					v.y = Filter.add(v.y, -a.y, -4);
 					break;
 				case 97: //a
 					_fireDirection.setTo( -1, 0);
@@ -79,7 +94,7 @@ package com.kocznur.actors
 					_fireDirection.setTo( 1, 0);
 					break;
 				case 115: //s
-					v.y = Filter.add(v.y, a.y, 2);
+					v.y = Filter.add(v.y, a.y, 4);
 					break;
 				case 32: //space
 					fireCallback();
@@ -94,10 +109,9 @@ package com.kocznur.actors
 		 */
 		public function update(dt:Number):void
 		{
-			x += v.x*World.time;
-			y += v.y*World.time;
+			x += v.x * World.time;
+			y += v.y * World.time;
 			
-			//rotation = Math.atan2(v.y, -v.x);
 			if (x + halfSize.x < 0)
 			{
 				x = stage.stageWidth + halfSize.x;
@@ -132,6 +146,7 @@ package com.kocznur.actors
 		{
 			_position.x = x;
 			_position.y = y;
+			
 			return _position;
 		}
 		
